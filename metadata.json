@@ -1,0 +1,5 @@
+{
+  "name": "Metal & Lubricant Price Tracker",
+  "description": "A real-time dashboard for tracking metal and lubricant prices with historical data, charts, and an AI assistant.",
+  "requestFramePermissions": []
+}
