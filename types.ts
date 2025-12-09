@@ -1,3 +1,4 @@
+
 export type Category = 'metal' | 'lubricant' | 'energy' | 'agriculture' | 'commodity' | 'index' | 'crypto' | 'forex';
 
 export interface PriceHistory {
@@ -22,9 +23,38 @@ export interface Item {
   contract?: string;
 }
 
+export interface NewsItem {
+  id: string;
+  title: string;
+  source: string;
+  time: string;
+  imageUrl?: string;
+  description: string;
+  content: string;
+  author: string;
+  publishedAt: string;
+}
+
+export interface Benchmark {
+  name: string;
+  value: number;
+  change: number;
+  data: PriceHistory[];
+}
+
 export interface ChatMessage {
   id: string;
   role: 'user' | 'model';
   text: string;
   timestamp: number;
+}
+
+export interface PriceAlert {
+  id: string;
+  email: string;
+  commoditySlug: string;
+  commodityName: string;
+  targetPrice: number;
+  status: 'active' | 'triggered';
+  createdAt: string;
 }

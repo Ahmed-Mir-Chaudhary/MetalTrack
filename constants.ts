@@ -1,4 +1,5 @@
-import { Item } from './types';
+
+import { Item, NewsItem } from './types';
 
 export const ADMIN_PASSWORD = "admin"; // Simple password for MVP
 
@@ -454,11 +455,51 @@ export const INITIAL_ITEMS: Item[] = [
   }
 ];
 
-export const MOCK_NEWS = [
-  { title: "Gold rises as dollar weakens ahead of Fed meeting", source: "Bloomberg", time: "2h ago" },
-  { title: "Crude oil drops amid supply concerns in Middle East", source: "Reuters", time: "4h ago" },
-  { title: "Copper hits 4-week high due to China demand resurgence", source: "CNBC", time: "5h ago" },
-  { title: "Agricultural commodities see volatility as harvest season begins", source: "AgriNews", time: "8h ago" },
+export const MOCK_NEWS: NewsItem[] = [
+  { 
+    id: '101',
+    title: "Gold rises as dollar weakens ahead of Fed meeting", 
+    source: "Bloomberg", 
+    time: "2h ago",
+    description: "Gold prices saw a significant uptick in early Asian trading as the dollar index softened.",
+    imageUrl: "https://images.unsplash.com/photo-1610375460969-d9586c72f081?auto=format&fit=crop&q=80&w=400",
+    author: "Sarah Jenkins",
+    publishedAt: "2024-02-12T08:00:00Z",
+    content: "Gold prices surged on Monday as the dollar weakened, with investors awaiting key inflation data that could influence the Federal Reserve's interest rate path. Spot gold rose 0.5% to $2,045.50 per ounce..."
+  },
+  { 
+    id: '102',
+    title: "Crude oil drops amid supply concerns in Middle East", 
+    source: "Reuters", 
+    time: "4h ago",
+    description: "Oil futures dipped as geopolitical tensions seemed to ease slightly, shifting focus back to demand.",
+    imageUrl: "https://images.unsplash.com/photo-1596707333555-e41da928b122?auto=format&fit=crop&q=80&w=400",
+    author: "Michael Chen",
+    publishedAt: "2024-02-12T06:00:00Z",
+    content: "Global oil benchmarks fell on Tuesday as easing geopolitical concerns in the Middle East led traders to take profits from last week's rally. Brent crude futures were down 60 cents..."
+  },
+  { 
+    id: '103',
+    title: "Copper hits 4-week high due to China demand resurgence", 
+    source: "CNBC", 
+    time: "5h ago",
+    description: "Industrial metal prices are rallying on hopes of stimulus measures from the world's largest consumer.",
+    imageUrl: "https://images.unsplash.com/photo-1629196914375-f7e48f477b6d?auto=format&fit=crop&q=80&w=400",
+    author: "Elena Rossi",
+    publishedAt: "2024-02-12T05:00:00Z",
+    content: "Copper prices advanced to their highest in four weeks as inventories in Shanghai Exchange warehouses dropped and data showed resilient manufacturing activity in China..."
+  },
+  { 
+    id: '104',
+    title: "Agricultural commodities see volatility as harvest season begins", 
+    source: "AgriNews", 
+    time: "8h ago",
+    description: "Unpredictable weather patterns in South America are causing jitters in soybean and corn markets.",
+    imageUrl: "https://images.unsplash.com/photo-1499529112042-b365039428cf?auto=format&fit=crop&q=80&w=400",
+    author: "David Miller",
+    publishedAt: "2024-02-12T02:00:00Z",
+    content: "Soybean and corn futures traded with high volatility on Monday. The market is reacting to mixed weather forecasts in Brazil, where heavy rains are delaying the harvest in some key regions..."
+  },
 ];
 
 export const MOCK_TRENDING = {

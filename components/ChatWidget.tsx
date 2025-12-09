@@ -4,10 +4,11 @@ import { Item, ChatMessage } from '../types';
 
 interface ChatWidgetProps {
   items: Item[];
+  isOpen: boolean;
+  setIsOpen: (isOpen: boolean) => void;
 }
 
-const ChatWidget: React.FC<ChatWidgetProps> = ({ items }) => {
-  const [isOpen, setIsOpen] = useState(false);
+const ChatWidget: React.FC<ChatWidgetProps> = ({ items, isOpen, setIsOpen }) => {
   const [messages, setMessages] = useState<ChatMessage[]>([
     { id: 'welcome', role: 'model', text: 'Hi! I can help you with metal and lubricant prices. Ask me anything!', timestamp: Date.now() }
   ]);
@@ -20,7 +21,9 @@ const ChatWidget: React.FC<ChatWidgetProps> = ({ items }) => {
   };
 
   useEffect(() => {
-    scrollToBottom();
+    if (isOpen) {
+      scrollToBottom();
+    }
   }, [messages, isOpen]);
 
   const handleSubmit = async (e: React.FormEvent) => {
